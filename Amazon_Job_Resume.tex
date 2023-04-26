@@ -1,0 +1,214 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.40in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\LARGE \textbf{Arunav Sanyal}}
+
+(236) 865-5547\ \
+\ \ arunav.sanyal91@gmail.com
+\end{center}
+
+
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item 
+	\headerrow
+		{\textbf{Johns Hopkins University}}
+		{\textbf{Baltimore, MD, USA}}
+	\\
+	\headerrow
+		{\emph{M.S.E, Department of Computer Science}}
+		{\emph{\textbf{2014 -- 2016}}}
+	
+	\item 
+		\headerrow
+			{\textbf{BITS Pilani University}}
+			{\textbf{Zuarinagar, Goa, India}}
+		\\
+		\headerrow
+			{\emph{B.E(Honors) Computer Science}}
+			{\emph{\textbf{2009 -- 2013}}}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+		\item
+	\headerrow
+	{\textbf{Amazon Web Services}}
+	{\textbf{Vancouver, British Columbia, Canada}}
+	\\
+	\headerrow
+	{\emph{\textbf{Software Development Engineer III }}}
+	{\emph{\textbf{July 2022 -- Present}}}
+	\begin{itemize*}
+		\item I am currently a Software Development Engineer  III  in AWS IoT  (Internet of Things) Rules Engine team (a managed cloud service that lets connected IoT devices transform and send data to AWS and other cloud services/ingestion points). 
+		\item My job duties include orchestrating/coordinating architectural design, product direction with stakeholders (technical and project management), operational excellence, software implementation, mentoring  and coaching junior engineers.  Notable projects I worked on
+		\begin{itemize*}
+			\item I am currently working on organizing, designing and implementing end to end TLS compliance for all internal communication as a part of the Fedramp US govt initiative. 
+			\item I lead the design, implementation and testing effort for \href{https://aws.amazon.com/about-aws/whats-new/2022/12/aws-iot-core-rules-engine-google-protocol-buffer-messaging-format/}{Google protobuf format support} for AWS IoT core ingestion.
+			\item I coordinated and led the effort for org wide improvements in high scale load testing (including writing the standard guidelines/template for it), investigating and implementing resiliency improvements for slow/misbehaving downstream ingestion which consume more client resources (threads/CPU etc)  
+		\end{itemize*}
+	\end{itemize*}
+	\headerrow
+	{\emph{\textbf{Software Development Engineer II }}}
+	{\emph{\textbf{March 2021 -- June 2022  Vancouver, British Columbia, Canada} }}
+	\headerrow
+	{\emph{\textbf{}}}
+	{\emph{\textbf{August 2018 -- Feb 2021  Seattle, Washington, USA} }}
+	\begin{itemize*}
+		\item  I was a Software Development Engineer II in AWS IoT  Rules Engine team and  AWS RDS Aurora Serverless team (a cloud service that provisions and maintains Relational Databases in AWS Cloud). Notable projects I worked on
+		\begin{itemize*}
+			\item  I led/designed/implemented low cost ingestion into AWS  IoT Core with \href{https://docs.aws.amazon.com/iot/latest/developerguide/iot-basic-ingest.html}{Basic Ingest}. The project involved simplifying ingestion and reduction of per message costs by 70 percent (from 1 dollar to 30 cents per million messages)
+			\item I led a cost reduction effort in AWS IoT Core, finding opportunities in low cost logging, infra usage and internal messaging costs, which led to an infrastructure cost reduction by 55 percent.
+			\item I was part of the team that implemented \href{https://aws.amazon.com/about-aws/whats-new/2020/12/introducing-the-next-version-of-amazon-aurora-serverless-in-preview/}{RDS Aurora Serverless V2}, a dynamically auto scaling managed relational database solution, in which my notable contribution was creating infrastructure management for EC2 hosts and firecracker VMs on which databases were hosted. 
+		\end{itemize*}
+	\end{itemize*}
+	\parskip=0.1em
+	  \item
+	  \headerrow
+	{\textbf{Amazon.com Services LLC (Amazon Retail)}}
+	{\textbf{Seattle, Washington, USA}}
+\headerrow
+{\emph{\textbf{Software Development Engineer  - I}}}
+{\emph{\textbf{April 2016 -- July 2018}}}
+\begin{itemize*}
+	\item I was a Software Development Engineer in Authenticity Team, Consumables Org (an internal Amazon retail service validating against counterfeit products) and in AWS IoT  Rules Engine team. Notable projects I worked on
+	\begin{itemize*}
+	\item  I was part of the team that implemented \href{https://brandservices.amazon.com/transparency}{Transparency} Android and IoS Apps, in which my notable contribution was device version management and communication to back end services from mobile apps. 
+	\item I worked on simplifying continuous integration in AWS IoT Core that led to savings of up to an hour per day for developers on code pipeline deployment/management and source code build. 
+    \end{itemize*}
+\end{itemize*}
+	\item
+		\headerrow
+			{\textbf{Informatica Business Solutions-HQ}}
+			{\textbf{Redwood City, California, USA}}
+		\\
+		\headerrow
+			{\emph{\textbf{Software Developer Intern}}}
+			{\emph{\textbf{May 2015 -- August 2015}}}
+		\begin{itemize*}
+			\item I implemented the auto provisioning framework, allowing Informatica compute nodes to dynamically scale in both Amazon EC2 Cloud  and premises hardware. 
+		\end{itemize*}
+	\item
+	\headerrow
+		{\textbf{Informatica Business Solutions-ILabs}}
+		{\textbf{Bangalore, Karnataka, India}}
+	\\
+	\headerrow
+		{\emph{\textbf{Software Developer}}}
+		{\emph{\textbf{January 2013 -- June 2014}}}
+	\begin{itemize*}
+		\item I worked on integrating Kerberos Authentication framework for the PowerCentre platform (a distributed server system in Informatica), where I extended HTTP curl client and Apache Tomcat Server used by Powercenter to be fully kerberos compliant. 
+	\end{itemize*}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+
+\subsection*{Open Source}
+
+\begin{itemize*}
+	\item I was a former maintainer of \href{https://github.com/goktugyil/EZSwiftExtensions}{EZSwiftExtensions} - A standard library for the Swift Lang and IOS extensions.
+	\item I extended \href{https://github.com/Khalian/curl}{cURL} to fully support Kerberos v5. 
+	
+\end{itemize*}
+
+
+\hrule
+\vspace{-0.4em}
+
+\subsection*{Academic Projects}
+
+\begin{itemize}
+
+\parskip=0.1em
+	\item
+		\headerrow
+			{\textbf{Modulo7 : A full stack Music Information Retrieval Engine} }
+			{\textbf{Johns Hopkins University}}
+		\\
+		\headerrow
+				{\emph{May 2015 -- Present}}
+		
+		\begin{itemize*}
+			\item I created a full stack MIR Engine using Music Theory principles. This engine would be able to process music sources of different formats (mp3, midi, sheet music etc) and allow a querying system for users to acquire statistics and similarities on music theory principles \hspace*{3pt}
+			\href{https://github.com/Khalian/Modulo7}{Source Code} \hspace*{3pt}
+			\href{https://jscholarship.library.jhu.edu/bitstream/handle/1774.2/40683/SANYAL-THESIS-2016.pdf}{Thesis}
+		\end{itemize*} 
+		
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Languages:]
+	Java, Scala, Swift, Bash/Csh Shell scripting, \LaTeX
+	\item[Technologies:] AWS S3, SQS, Kinesis,
+	DynamoDB, Cloudformation,  Lambda, EC2, ECS, Akka, cURL and  Kerberos
+	\item[Tools:]
+	IntelliJ, Git, Vim
+\end{description*}
+\end{indentsection}
+
+\end{document}
